@@ -1,0 +1,157 @@
+10/18/02:
+	* (ADB) Badukiplus played its first game against Wallyplus, using the
+    twogtp1or2.py Python script. 
+
+10/18/02:
+	* (ADB) Badukiplus played its first game against Gnu Go, using the
+	  twogtp1or2.py Python script. First GTP V2 implementation finished.
+
+10/13/02:
+	* (ADB) First C++ version (compilation with gcc-3.2).
+
+Below: previous ChangeLog and NEWS files
+
+---------------------------------------------------------------------------
+
+ChangeLog
+=========
+
+1999
+
+1999. 1. 5	Baduki 0.1 released
+
+1999. 1. 15	Baduki 0.2 released
+
+2. 2	pattern.c. convert one pattern to eight direction.
+2. 6	group renamed to string. include gID, gList
+	intBoard wGIDMap : group id
+	gen_wGIDMap(): get group id from scoreboard
+2.11	pattern handling for side and corner
+2.15	intBoard vsIDMap : ID for eye(territory)
+2.22	Some endgame patterns added
+	new variable: intboard powerBoard1
+	revive function Getmove(lookForSave2)
+	Strengthen endgame functions
+	Baduki LOGO
+
+1999. 3. 7	Baduki 0.2.1 released
+
+3. 9	new program mkpat for pattern converting.
+
+1999. 3. 10	Baduki 0.2.2 released
+
+3.11	intBoard valueBoard for each moves value * 10
+
+	intBoard myStones, hisStones for number of my/his stones of
+	each point.
+
+	thk_jump1() check for 2 point jump in 3 line.
+
+3.12	in Blocking 1 Point extension and knight'move, two string must
+	not in atari
+
+	Capture opp. stones liberty is 2 when escaping.
+
+	Avoid double atary
+
+	Give bonus value save string kills undead string
+
+	Think higher postion first in killing string
+
+	In case a string can live with capture a opp. string or extend itself,
+	extend if the liberty of string is 2 after capture
+
+1999. 3. 13	Baduki 0.2.3 released
+
+3. 16	Change gtk_signal_connect_object() to gtk_signal_connect()
+
+	New function: get_moves_for_kill()
+	More reliable for ladder.
+
+	markDead() save killing/saving move in kx,ky/sx,sy
+	and use this in thinking.
+
+3. 17	killable() cosidering diagonal move first if necessary.
+
+	Check a move is safe when the move is biggest.
+
+	add counter in tryPlay(). save it sc/kc in string info
+
+	New function: Getmove(fill_dame)
+
+3. 18	Getmove(thk_jump1) check opp.'s weak stone.
+
+3. 19	restoreState() is no necessary in pattern code.
+	make alternative postion in pattern.  PPOS(x,y)
+	
+	Remake: Getmove(takeCorner) randomly select corner and postion
+
+	markDead() mark undead if two adjacent strings are dead
+
+1999. 3. 20	Baduki 0.2.4 released
+
+3. 24	intBoard connectMap2 : opp's connection map
+
+	New function: get_moves_for_save()
+	
+	reduce end games pattern's value
+
+3. 28	Getmove(lookForKill) Kill dead stones if it can connect to safe stone
+
+3. 30	get_moves_for_save/kill() Considering 1 point jump for kill/save.
+
+	intBoard extMap[4] extension length from stone
+
+	getMove() prevent move endangering safe stone
+
+1999. 3. 31	Baduki 0.2.6 released
+
+---------------------------------------------------------------------------
+
+NEWS
+====
+
+0.2.6 (1999. 3. 31)
+reduce end games pattern's value
+Kill dead stones if it can connect to safe stone
+Considering 1 point jump for kill/save.
+prevent move endangering safe stone
+
+0.2.5 (1999. 3. 23)
+Fixed somg bugs.
+
+0.2.4 (1999. 3. 20)
+More reliable in Killing stones
+Fill Dames.
+Random move in take corner.
+
+0.2.3 (1999. 3. 13)
+In Blocking 1 Point extension and knight'move, two string must not in atari
+  Capture opp. stones liberty is 2 when escaping.
+Avoid double atary
+Give bonus value save string kills undead string
+Think higher postion first in killing string - good result in ladder.
+In case a string can live with capture a opp. string or extend itself,
+extend if the liberty of string is 2 after capture
+
+0.2.2 (1999. 3. 10)
+  You can easily add a new pattern.
+  Read PATTERNS.
+
+0.2.1 (1999. 3. 7)
+  Group Information. (See MODE: wGIDMap and vsIDMap)
+  Group in previous version renamed to String.
+  Pattern converting and Matching.
+
+0.2 (1999. 1. 16)
+  Adopt automake/autoconf/gettext by Ryu, Changwoo <cwryu@adam.kaist.ac.kr>
+	More portable and support NLS.
+  Bugs in Undo/Redo fixed.
+  A little more reliable in checking a stone is killable/saveable,
+but spent much more time.
+
+0.1 (1999. 1. 5)
+  First public release.
+
+In 4th FOST Cup (Oct 1998, Japan) Baduki ranked 21th.
+

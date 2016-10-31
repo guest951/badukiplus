@@ -1,0 +1,5 @@
+- Make the engine plays at smaller board sizes (the baduki source had
+  board size = 19 hard-coded in various places).
+- Check that the ko status is correctly kept track of by the engine.
+- Finish console-mode playing (adapted from code in Wallyplus).
+

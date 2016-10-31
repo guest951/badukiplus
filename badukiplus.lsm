@@ -1,0 +1,15 @@
+Begin4
+Title:          Badukiplus
+Version:        0.1.2
+Entered-date:   2002-10-18
+Description:    A mediumweight Go playing program.
+Keywords:       Go, game, Baduki, AmiGo, Wallyplus, engine, GTP
+Author:         Andrew D. Balsa <andrebalsa@mailingaddress.org>
+Maintained-by:  Andrew D. Balsa <andrebalsa@mailingaddress.org>
+Primary-site:   www.ibiblio.org pub/Linux/games/strategy
+                722K Badukiplus-0.1.2.tar.gz
+Alternate-site:
+Original-site:
+Platforms:      Linux, GNU C++
+Copying-policy: GNU Public License 2.0
+End

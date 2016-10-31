@@ -1,0 +1,275 @@
+Introduction
+============
+
+Badukiplus 0.1 is a C++ rewrite of Baduki, a sophisticated Go program
+written by Lim Jaebum. Baduki's origins trace back to AmiGo, which was
+itself a C rewrite of a Pascal Go player written by Stoney Ballard.
+
+I already rewrote Wally and Amigo, and someday I plan on writing my own
+Go engine in an OO language. In the meantime, I was curious to see how
+different Go engines were written, and how strong or weak these simple Go
+engines would be compared to recent versions of Gnu Go.
+
+Check Wallyplus and Amigoplus first! They are now on ibiblio.org's Linux
+archive.
+
+Baduki is a larger program than Wally and Amigo; it incorporates both a
+sophisticated pattern matching algorithm and the complex heuristics found
+in Amigo. Again, the data structures are similar.
+
+I rewrote Baduki directly from the original source, version 0.2.9. Basically
+I removed all the X Window and GTK related code and added a GTP version 2
+compliant front-end. I plan on writing a nice KDE-based GTP V2 client, Real
+Soon Now. I work using KDevelop, a nice IDE for KDE.
+
+Below is the original README file from Baduki.
+
+The original Baduki Version 0.2.9 tarball is included in the Documentation
+directory.
+
+Andrew D. Balsa <andrebalsa@mailingaddress.org>
+13 October 2002
+
+-----------------------------------------------------------------
+
+  Baduki 0.2
+
+  Baduki is a computer Baduk(Go) program.
+
+  Baduki is registed as BadukI on IGS.
+  Baduki Homepage: http://soback.kornet21.net/~artist/baduk/baduki.html
+
+
+Copyright and Acknowledgement:
+
+  Baduki: Copyright(C) 1998-1999 Lim Jaebum (artist@soback.kornet21.net)
+  Baduki is Free software.  you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation - version 2.
+
+  Baduki is based on Xamigo( Copyright(C) 1992 Neil Bowers)
+and Amigo(Copyright(C) 1989 Todd R. Johnson).
+  Gtkgoboard widget: Copyright (C) 1998 Changwoo Ryu.
+  Gmp library: Copyright (C) 1995-1997 William Shubert.
+     He is author of Cgoban(http://www.hevanet.com/wms/comp/cgoban/)
+
+
+Features:
+  Play Baduk(Go) with Computer or Human.
+  Load/Save/Analyze SGF file.
+  Suport GMP(go modem protocol)
+  Easy to debug.
+
+
+Install: (Read INSTALL)
+
+  Do the following from the baduki directory:
+$ ./configure
+$ make
+$ make install
+$ baduki
+
+  Baduki requires gtk+ 1.0.x.
+  Tested Under x86/Alpha Linux libc5/glibc2.
+
+Usage:
+
+-sgf filename		Analyzing sgf file
+# ./baduki -sgf in.sgf > out.sgf
+
+-lsgf filename [movenum]	Load sgf file
+# ./baduki -lsgf foo.sgf 12
+
+* Baduki automatically saves after each moves and end of game.
+
+-gmp			Gmp mode
+With this Baduki is ran under CGoban.
+On CGoban's Go Modem menu, type './baduki -gmp' on Program entry.
+
+
+Feel free to mail me any comments and suggestions for improvements.
+
+Special Thanks to
+Ryu Changwoo <cwryu@adam.kaist.ac.kr>
+	gtkgoboard and using automake/autoconf/gettext.
+
+--
+Artist (artist@soback.kornet21.net)
+
+-----------------------------------------------------------------
+
+How to add a new Pattern
+========================
+
+To add a new pattern edit src/patterns.dat.
+
+Symbols in patterns.dat
+=======================
+  NOTE: Symbols must placed in begin of line.
+
+;	Comment
+#	Begin of pattern
+	#Idnum Default_value [x_position y_position]
+#.	End of patterns
+>	Begin of Code for pattern
+|	Pattern TYPE
+	|PT_CENTER	Check for center only (Default)
+	|PT_WHOLE	Check for entire board
+	|PT_SIDE	Check for side only
+	|PT_CORNER	Check for corder only
+
+
+Symbols in pattern
+==================
+  NOTE: 'My' means current turn's, 'His' means opponent's
+
+.	Empty point
+O	My stone
+o	My stone or empty
+X	His stone
+x	His stone or empty
+S	Empty && My territory from scoreBoard
+s	Empty && His territory from scoreBoard
+T	Empty && My forcefield from claim
+t	Empty && His forcefield from claim
+%	Not empty
+@	My next move
+
+
+Coordinate on Pattern
+=====================
+
+ | (y,0) ... (x, y)
+ |  ..         ..
+ | (0,0) ... (x, 0)
+ |   -- This side is border if Pattern type is PT_SIDE
+ +- Here is Corner if Pattern type is PT_CORNER
+
+
+Pre-defined Macros for Code
+===========================
+
+#define PXY(a, b)       get_px(x, a, b, pat, dir)][get_py(y, a, b, pat, dir)
+	Get real position on board for array
+	Usage:	INTBOARD[PXY(a,b)] --> INTBOARD[absX][absY]
+
+#define PCXY(a, b)      get_px(x, a, b, pat, dir), get_py(y, a, b, pat, dir)
+	Get real position on board for function
+	Usage:	FNCTION(PCXY(a,b)) --> FUNCTION(absX, absY)
+
+STRING(a, b)
+	string on (a,b) from stringRec sList[]
+	
+LIBC(a, b)
+	Liberty count for string on (a,b)
+
+LIBB(a, b)      libBoard[PXY(a,  b)]
+
+BORD(a, b)      bord[PXY(a, b)]
+	0: empty, 1: my stone, -1: his stone
+
+SCORE(a, b)     scoreBoard[PXY(a, b)]
+	0: unknown
+	2: My Territory
+	1: Border of My Territory
+	-1, -2: His....
+	
+CLAIM(a, b)     claim[PXY(a, b)]
+	Positive: My force field
+
+POW(a, b)       powerBoard[PXY(a,b)]
+	How many claim[] changes for mine when placed my stone
+POW1(a, b)	powerBoard1[PXY(a,b)]
+	How many claim[] changes for mine when placed his stone
+POW2(a, b)      powerBoard2[PXY(a,b)]
+	(POW+ POW1) / 2
+
+ISSAFE(a, b)    sList[gMap[stringIDs[PXY(a,b)]]].isSafe
+ISDEAD(a, b)    sList[gMap[stringIDs[PXY(a,b)]]].isDead
+	String on (a, b) is safe or dead.	
+
+TRY_PLAY(a, b, c)       tryPlay(PCXY(a,b), c)
+	Put a stone on (a, b) when 'c' is '1' put my stone, and
+	when 'c' is '-1' put his stone.
+	NOTE: When using TRY_PLAY you must call restoreState()
+
+KILLABLE(a, b)          killable(PCXY(a,b), &xx, &yy)
+SAVEABLE(a, b)          saveable(PCXY(a,b), &xx, &yy)
+	String on (a,b) in pattern is killable or saveable.
+
+PPOS(a,b)		Alternative Position
+
+PERCENT(a)		(random() % 100) < a
+
+Simple Pattern
+==============
+
+#Idnum Default_value
+...........
+..pattern..
+...........
+
+<Example>
+#3 6
+OX..
+.@.O
+
+- In this condition value of move on '@' is 6
+
+
+Pattern with Code
+=================
+#104 8
+|PT_SIDE
+oX.*
+O.@t
+...t
+> if (LIBC(0,1) < 3)
+      value = 0;
+
+- This pattern is for side.
+  Defualt value is 8 but if Liberties of string on (0,1) is
+less than 3 this move is useless(value = 0).
+
+
+Complex Code
+============
+#Idnum default_value X_postion Y_postion
+
+<Example>
+#112 4 0 0
+|PT_SIDE
+*.Xo
+t.Oo
+> if (!ISSAFE(2,0) || LIBB(0,0) == 1)
+    value = 0;
+  else
+    value += LIBB(0,0);
+
+- This Pattern has no '@'.
+  If you want check whose territory or forcefile of next move
+indicate position like this.
+  This Pattern's next move is (0, 0).
+
+Alternative Position
+====================
+<Example>
+#304 5.3
+|PT_CORNER
+......
+..X...
+....@.
+......
+......
+> if (CLAIM(4, 2) > 4)
+    value = 0;
+  else if (PERCENT(30))
+    PPOS(4,3);
+
+- This patterns default position is '@'(4,2).
+  Probability of alternative position (4,3) is 30%.
+
+Tuning a new pattern
+====================
+After adding a new pattern you must test it works correctly.
+

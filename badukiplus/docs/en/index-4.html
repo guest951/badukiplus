@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+ <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.20">
+ <TITLE>The Badukiplus Handbook: Playing on the console</TITLE>
+ <LINK HREF="index-5.html" REL=next>
+ <LINK HREF="index-3.html" REL=previous>
+ <LINK HREF="index.html#toc4" REL=contents>
+</HEAD>
+<BODY>
+<A HREF="index-5.html">Next</A>
+<A HREF="index-3.html">Previous</A>
+<A HREF="index.html#toc4">Contents</A>
+<HR>
+<H2><A NAME="s4">4.</A> <A HREF="index.html#toc4">Playing on the console</A></H2>
+
+
+<H2><A NAME="ss4.1">4.1</A> <A HREF="index.html#toc4.1">Command-line arguments</A>
+</H2>
+
+
+<P>Badukiplus supports the following command-line arguments:
+<UL>
+<LI>        <CODE>-s</CODE> <EM>n</EM><BR>
+Board size <EM>n</EM> ; usual board sizes are 9 (minimum), 13 or 19
+(maximum).</LI>
+<LI>        <CODE>-handicap</CODE> <EM>m</EM><BR>
+Specifies a handicap of <EM>m</EM> stones for Black. Overridden by
+<CODE>-even</CODE> option.</LI>
+<LI>        <CODE>-komi</CODE> <EM>p</EM><BR>
+Specifies a komi of <EM>p</EM> for White; note that <EM>p</EM> is a
+float.</LI>
+<LI>        <CODE>-white</CODE><BR>
+badukiplus plays white.</LI>
+<LI>        <CODE>-gtp</CODE><BR>
+Enters GTP mode (ignores other command-line arguments).</LI>
+<LI>        <CODE>-h</CODE> or <CODE>--help</CODE><BR>
+Displays a short help file and exits.</LI>
+<LI>        <CODE>-v</CODE> or <CODE>--version</CODE><BR>
+Shows program name and version and exits.</LI>
+</UL>
+</P>
+
+<H2><A NAME="ss4.2">4.2</A> <A HREF="index.html#toc4.2">Console Output</A>
+</H2>
+
+<P>A 9 x 9 board with a few stones will be displayed as:</P>
+<P>
+<PRE>
+        a b c d e f g h j
+      1 . . . . . . . . . 1
+      2 . . . . . O O . . 2
+      3 . . O . . . # . . 3
+      4 . . O . . . # . . 4
+      5 O O ^ O . . . . . 5
+      6 . # O # . # # . . 6
+      7 . # # # . . . . . 7
+      8 . . . . . . . . . 8
+      9 . . . . . . . . . 9
+        a b c d e f g h j
+</PRE>
+</P>
+<P>where '^' is a ko, '#' is black, 'O' is white.
+<UL>
+<LI>Badukiplus prompts for the next move and responds instantaneously.
+</LI>
+<LI>Badukiplus expects moves to be typed as <CODE>LetterNumber</CODE> (no spaces),
+e.g.
+<CODE>a1</CODE> means a stone in the upper left, <CODE>j9</CODE> is bottom right.
+</LI>
+<LI>Typing "." (without the double quotes) means an immediate resignation and
+Badukiplus will exit after
+calculating the final score.
+</LI>
+<LI>Typing "pass" will do exactly that. Badukiplus will continue playing or
+pass, too. If both players pass Badukiplus will calculate the final score
+and exit.</LI>
+</UL>
+</P>
+
+<H2><A NAME="ss4.3">4.3</A> <A HREF="index.html#toc4.3">Strength</A>
+</H2>
+
+<P>
+<UL>
+<LI>Badukiplus probably ranks around 25 kyu. The algorithm is not very
+sophisticated, even though its heuristics (set of rules that the
+engine follows to decide on a move) are more complex than those found in
+Wallyplus. The original baduki.c was designed as a lightweight, fast Go
+playing engine.</LI>
+<LI>Badukiplus is a weak player, but it knows how to play
+legal moves. This is achieved in around 90k of code. By comparison, the
+implementation of GTP 1.0 in Gnu Go is already 75k long, and it is
+considered incomplete!
+</LI>
+<LI>The main purpose of this program is to serve as a test-bed for a C++
+implementation of the Go Text Protocol (GTP). More information on
+the GTP can be found on the 
+<A HREF="http://www.gnu.org/software/gnugo/gnugo.html">Gnu Go homepage</A>.</LI>
+</UL>
+</P>
+
+<HR>
+<A HREF="index-5.html">Next</A>
+<A HREF="index-3.html">Previous</A>
+<A HREF="index.html#toc4">Contents</A>
+</BODY>
+</HTML>

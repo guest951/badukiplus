@@ -1,0 +1,270 @@
+
+<!doctype linuxdoc system>
+<article>
+<title>The Badukiplus Handbook
+<author>Andrew D. Balsa <htmlurl url="mailto:andrebalsa@mailingaddress.org" name
+
+= "&lt;andrebalsa@mailingaddress.org&gt;">
+<date>Version 0.1 , Sun Oct 6 00:39:02 HKT 2002
+<abstract>
+This Handbook describes Badukiplus Version 0.1. Badukiplus is a simple program to
+play Go, rewritten in C++ from Baduki, in turn based on AmiGo, in turn
+based on the original Pascal program by Stoney Ballard dating from 1983. BadukiPlus is similar
+to Wallyplus, another Go engine rewrite to C++.
+</abstract>
+
+<toc>
+
+<sect>Introduction<p>
+
+Badukiplus is an experimental Go playing engine with a GTP-compliant interface.
+It is
+written in C++ using the KDevelop development environment. Badukiplus has a
+simple
+structure derived from the original Pascal program by Stoney Ballard.
+
+<p>
+<sect1>Changes<p>
+
+<enum>
+<item>The source code was converted to C++ and made into a KDevelop project.
+<item>A handbook in LinuxDoc SGML was added. KDevelop generates the HTML version
+automatically.
+<item>The X Window routines were removed.
+<item>BadukiPlus now accepts any board size between 9 and 19 (some bugs remain).
+<item>A different number of handicap stones can be specified for the common
+board
+sizes of 9, 13 and 19.
+<item>A Go Text Protocol (GTP) version 2 front-end was added.
+</enum>
+See the <em>ChangeLog</em> file for details.
+
+<sect1>Pseudocode<p>
+<verb>
+main()
+  read command line
+  parse command line
+  if (gtp)
+    gtp_play_loop()
+  else
+    console_play_loop()
+  endif
+
+
+gtp_play_loop()
+  receive command
+  parse command
+  execute command
+
+
+console_play_loop()
+  display board on console
+  get console input
+  play
+</verb>
+<p>
+<sect>Installation
+<p>
+<sect1>How to obtain Badukiplus
+<p>
+Badukiplus is now in the ibiblio.org Linux archive.
+
+<sect1> Requirements
+<p>
+Compiling badukiplus requires a standard C++ compiler such as g++. The
+executable is presently quite small and will run in a limited
+amount of memory. Badukiplus does not include a GUI, so its compilation does
+not require any particular toolkit or library. <sect1> Compilation and
+installation <p>
+
+In order to compile and install badukiplus on your system, type the following in
+the base directory of the badukiplus distribution:
+
+<tscreen><verb>
+% ./configure
+% make
+% make install
+</verb></tscreen>
+
+<p>
+Since badukiplus uses <bf>autoconf</bf> and <bf>automake</bf> you should have no
+trouble
+compiling it.
+Should you run into problems, please report them to the author at
+<htmlurl url="mailto:andrebalsa@mailingaddress.org" name =
+"&lt;andrebalsa@mailingaddress.org&gt;">.
+
+Bug reports, contributions and suggestions are welcome.
+<p>
+
+<sect>Usage <p>
+
+<sect1>General Usage
+<p>
+In console mode badukiplus will direct its output to stdout and get its input
+from stdin.
+Error messages will be directed to stderr.
+
+<sect1>Playing
+<p>
+
+Assuming you know the basic rules of Go and have compiled badukiplus
+successfully:
+
+<sect1>Getting started<p>
+
+<itemize>
+<item>To start the game, just execute the program:
+<tscreen>./badukiplus
+</tscreen>
+
+<item>This will start the game with the default board size, which is 9 x 9.
+      If you want another size, just specify it on the command-line, e.g.:
+<tscreen>./badukiplus -s 13
+</tscreen>
+      will start badukiplus with a 13 x 13 size board, or e.g.:
+<tscreen>./badukiplus -s 19
+</tscreen>
+      will start Badukiplus with a 19 x 19 size board. Other sizes are possible.
+
+<item>Badukiplus will play black by default. To make Badukiplus play white:
+<tscreen>./badukiplus -white
+</tscreen>
+
+<item>The default handicap is 0 stones, but this can be changed using the
+      -handicap option, e.g.:
+<tscreen>./badukiplus -s 13 -handicap 9
+</tscreen>
+<item>A different handicap can be specified, up to a maximum of 4
+      stones on a 9 x 9 board, and 9 stones on the 13 and 19 sized boards.
+</itemize>
+<sect> Playing on the console
+<p>
+<sect1>Command-line arguments<p>
+
+Badukiplus supports the following command-line arguments:
+<itemize>
+<item>	    <tt>-s</tt> <em>n</em>
+<newline>Board size <em>n</em> ; usual board sizes are 9 (minimum), 13 or 19
+(maximum).
+<item>	    <tt>-handicap</tt> <em>m</em>
+<newline>Specifies a handicap of <em>m</em> stones for Black. Overridden by
+<tt>-even</tt> option.
+<item>	    <tt>-komi</tt> <em>p</em>
+<newline>Specifies a komi of <em>p</em> for White; note that <em>p</em> is a
+float.
+<item>	    <tt>-white</tt>
+<newline>badukiplus plays white.
+<item>	    <tt>-gtp</tt>
+<newline>Enters GTP mode (ignores other command-line arguments).
+<item>	    <tt>-h</tt> or <tt>--help</tt>
+<newline>Displays a short help file and exits.
+<item>	    <tt>-v</tt> or <tt>--version</tt>
+<newline>Shows program name and version and exits.
+</itemize>
+
+<sect1>Console Output<p>
+A 9 x 9 board with a few stones will be displayed as:<p>
+<verb>
+        a b c d e f g h j
+      1 . . . . . . . . . 1
+      2 . . . . . O O . . 2
+      3 . . O . . . # . . 3
+      4 . . O . . . # . . 4
+      5 O O ^ O . . . . . 5
+      6 . # O # . # # . . 6
+      7 . # # # . . . . . 7
+      8 . . . . . . . . . 8
+      9 . . . . . . . . . 9
+        a b c d e f g h j
+</verb>
+<p>
+   where '^' is a ko, '#' is black, 'O' is white.
+<itemize>
+<item>Badukiplus prompts for the next move and responds instantaneously.
+
+<item>Badukiplus expects moves to be typed as <tt>LetterNumber</tt> (no spaces),
+e.g.
+      <tt>a1</tt> means a stone in the upper left, <tt>j9</tt> is bottom right.
+
+<item>Typing "." (without the double quotes) means an immediate resignation and
+Badukiplus will exit after
+      calculating the final score.
+
+<item>Typing "pass" will do exactly that. Badukiplus will continue playing or
+      pass, too. If both players pass Badukiplus will calculate the final score
+and exit.
+</itemize>
+
+<sect1>Strength<p>
+<itemize>
+<item>Badukiplus probably ranks around 25 kyu. The algorithm is not very
+      sophisticated, even though its heuristics (set of rules that the
+engine follows to decide on a move) are more complex than those found in
+Wallyplus. The original baduki.c was designed as a lightweight, fast Go
+playing engine.
+<item>Badukiplus is a weak player, but it knows how to play
+legal moves. This is achieved in around 90k of code. By comparison, the
+implementation of GTP 1.0 in Gnu Go is already 75k long, and it is
+considered incomplete!
+
+<item>The main purpose of this program is to serve as a test-bed for a C++
+      implementation of the Go Text Protocol (GTP). More information on
+      the GTP can be found on the <url
+url="http://www.gnu.org/software/gnugo/gnugo.html"
+      name="Gnu Go homepage">.
+</itemize>
+
+<sect>Questions and Answers<p>
+<enum>
+<item>Q: Where does the name "baduki" come from?
+<p>
+A: Baduk means <em>Go</em> in Korean.
+
+<item>Q: Where do I find the rules of Go?
+<p>
+A: Check the <em>Documentation</em> folder included with this package, you will
+find the
+file <em>Rules</em> and also some other documents for beginners.
+
+<item>Q: Where can I find more information about Computer Go?
+<p>
+A: The <url url="http://www.gnu.org/software/gnugo/gnugo.html"
+name="Gnu Go homepage"> is a good starting point.
+</enum>
+
+<sect>Copyright<p>
+
+Baduki Copyright 1999 Lim Jaebum
+
+Badukiplus Copyright 2002 Andrew D. Balsa , <htmlurl
+url="mailto:andrebalsa@mailingaddress.org" name =
+"&lt;andrebalsa@mailingaddress.org&gt;">
+
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+<bf>Note:</bf>
+
+The original baduki source does not include any clear copyright notice.
+However the following copyright can be found in some files:
+<tscreen>
+      Copyright (c) 1983 by Three Rivers Computer Corp.
+      Written: January 17, 1983 by Stoney Ballard
+</tscreen>
+<p>
+The <em>AUTHORS</em> file lists all known contributors to this package.
+
+</article>

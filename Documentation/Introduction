@@ -1,0 +1,191 @@
+ THE GAME OF GO
+
+ Background
+ ----------
+ Go is a board game which is extremely popular in Japan.  In fact, it might be
+said that Go is more popular in Japan than any game is in the U.S.. 
+Professional players in Japan make their livelihood by playing Go.  The Go 
+rating system involves levels attained in tournament play.  The skill of 
+players is so varied that there are 29 different categories of rating 
+classes.  The lowest rating class is a rating of 20 Kyu and the highest class
+is 9 Dan (you might recognize this title as the same one used in Karate).
+To compare these classes to chess ratings, a 1 Dan (one level above a 1 Kyu)
+would be comparable to a 2200 chess player.  A 10 Kyu (ten levels beneath a
+1 Dan) would be comparable to a 1500 chess player.                               
+                                                              
+ One of the attractions of Go to the amateur player is the use of the rating
+system for determining handicaps.  A rating difference of 9 kyu, for example,
+can be used to approximate an even game between the two opponents by allowing
+the lower rated opponent to essentially make 9 free moves in a row at the 
+beginning of the game.  The actual mechanics of the handicap are that the lower
+rated player must play 9 stones in designated spots on the board.  This 
+advantage is almost equivalent to a knight odds in chess.
+
+ The Board
+ ---------
+ The normal Go board used in tournament play is a grid of size 19x19.  To speed
+up the game, a smaller board is often used in skittles play.  After a 19x19
+board, the 13x13 board is most popular.  For really fast play, an 11x11 board
+is sometime used.  The following diagram shows the setup of the 13x13 board
+which is commonly used on CIS:
+
+ a  b  c  d  e  f  g  h  i  j  k  l  m
+ -  -  -  -  -  -  -  -  -  -  -  -  -   1
+ -  -  -  -  -  -  -  -  -  -  -  -  -   2
+ -  -  -  -  -  -  -  -  -  -  -  -  -   3 
+ -  -  -  -  -  -  -  -  -  -  -  -  -   4 
+ -  -  -  -  -  -  -  -  -  -  -  -  -   5 
+ -  -  -  -  -  -  -  -  -  -  -  -  -   6 
+ -  -  -  -  -  -  -  -  -  -  -  -  -   7 
+ -  -  -  -  -  -  -  -  -  -  -  -  -   8 
+ -  -  -  -  -  -  -  -  -  -  -  -  -   9 
+ -  -  -  -  -  -  -  -  -  -  -  -  -  10 
+ -  -  -  -  -  -  -  -  -  -  -  -  -  11 
+ -  -  -  -  -  -  -  -  -  -  -  -  -  12 
+ -  -  -  -  -  -  -  -  -  -  -  -  -  13 
+ 
+
+ Playing the Game
+ ----------------
+  Similar to checkers, but unlike chess, there is only one type of playing
+piece used in Go - a stone.  One side uses White colored stones (characterized
+by "O") while the other side uses Black colored stones (characterized by an
+"x"). 
+  The object of the game of Go is to get more points than your opponent.
+You get points in Go in two ways.  The first way to get points is to capture
+your opponent's stones; every stone captured is worth a point.  The footnote
+to the above diagram shows the number of captured O stones as 3 (meaning that
+Black gets three points for captures) and the number of captured x stones
+as 5.  The second way to get points is to surround spaces which are not
+occupied by your own stones.  For each space which is in an area surrounded
+(controlled) by your stones but is not occupied by you, you get one point.
+  The definition of being surrounded is a very rigorous one in Go.  A stone
+placed in the middle of the board has the possibility of four connections,
+vertically and horizonally, akin to the compass directions North, East, South,
+and West.  These open spaces are given the term "liberties," and a single
+stone placed in the center of the board away from any other stones would be
+said to have four liberties.  A single stone placed on the side of the board
+would have three liberties and a stone placed in a corner would have two
+liberties.
+  If the opponent's stones were occupying three of the four liberties and the
+opponent, on his turn, placed a stone in the only remaining liberty, your stone
+would be considered surrounded and would be captured and removed from the 
+board.  If one of your stones is occupying a liberty of another one of your
+stones, the unoccupied spaces of both stones are combined and form the
+liberties of the connected formation.  The stones of a connected formation
+are captured only when all the liberties of that formation are occupied by the
+opponent's stones.
+  The order of determining captures in Go is important.  When a player places a
+stone on a space for a move, all stones of the opponent are first looked at
+to determine if any have been captured.  It is possible therefore to place a
+stone in a spot which causes the stone's connecting formation to have no
+liberties IF AND ONLY IF the placing of the stone causes the capture of stones
+of the opponent such that after the captured stones are removed, the connecting
+formation does have liberties.  There is one important exception to this rule
+of the order of determining captures.  This exception is called the rule of KO
+and states that YOUR stones are looked at first for determining captures if
+you place a stone in a space that would cause the position to be exactly the
+same as on the IMMEDIATELY preceding move.  Stated another way, the rule of KO 
+states that if your opponent has just captured a stone of yours, you cannot 
+immediately place a stone in the now unoccupied space, if the placing of the
+stone would cause the position to be exactly the same as on YOUR immediately 
+preceding move.  A diagram is presented here to illustrate these rules:
+
+
+ a  b  c  d  e  f  g  h  i  j  k  l  m
+ -  x  x  O  -  -  -  -  -  O  x  O  -   1
+ x  -  x  O  -  -  -  -  -  O  x  -  x   2
+ x  x  O  O  O  O  O  O  O  O  x  x  x   3                                     
+ O  O  O  -  -  -  -  -  -  O  O  O  O   4 
+ -  -  -  -  O  -  -  O  -  -  -  -  -   5 
+ -  -  -  -  -  -  -  -  -  -  O  -  -   6 
+ -  O  O  -  -  -  -  -  -  -  -  -  -   7 
+ -  -  -  -  -  O  -  -  -  O  -  -  -   8 
+ -  -  -  -  -  -  -  -  O  x  O  -  -   9 
+ -  O  O  O  -  -  -  -  O  -  -  -  -  10 
+ O  O  -  O  O  O  -  -  -  -  -  -  -  11 
+ x  x  O  x  x  O  -  -  -  -  -  -  -  12 
+ -  x  x  -  x  O  -  -  -  -  -  -  -  13 
+ 
+ Captured Stones: O- 3
+                  x- 5
+
+ It is Black's (x's) move in this position.  Let's look at the four quadrants
+of the board to illustrate the rules of capturing.  In the lower right hand
+quadrant of the board (SE quadrant) Black's stone at j9 is in trouble. If
+it were White's move, an O stone could be placed at j10.  The j9 stone would
+therefore have no liberties and would be taken off and captured.  Black can
+try to build a formation by playing at j10 in the above position, but White
+would reply j11, threatening a capture again (There is a warning verbalized
+in Go similar to the "Check" in chess.  In Go for a move which threatens a
+capture the word is "Atari").  There is no escape for Black in this position,
+for if Black plays k10, White continues the "ladder formation" with l10, until
+Black eventually is pinned to the edge of the board and runs out of room.
+
+ In the upper right hand quadrant (NE quadrant) of the board, Black's formation
+is also in trouble.  If Black plays 1...M1, then White can play 2.L2 capturing
+the entire formation.  Note that White's 2.L2 move causes his L2, L1 formation
+to have no liberties.  But since Black is completely surrounded and Black is
+looked at first, Black's pieces are taken off first thereby giving liberties
+to the L2, L1 formation.  If Black does not move in the NE quadrant, White
+can move 1.M1 (threatening L2).  In that case, Black can play 1...L2 capturing
+White's L1, M1 formation, but White then moves 2.M1 again.  After 2.M1, Black
+can capture the M1 stone with 2...L1, but then White will capture all of 
+Black's formation a later move at M1.  In the real play of the game, White
+need not play at all in the NE quadrant formation.  For any formation to be
+safe from capture the formation needs two pockets of surrounded liberties.
+These pockets (called eyes) determine the "life" of the formation. Since
+Black cannot create two eyes in the NE quadrant formation, regardless of his
+play, the NE quadrant formation is dead for Black and therefore will be removed
+at the end of the game as if White had captured it by surrounding it.  
+  
+  In Go, it is not necessary to play a stone every move.  You can take a pass
+and refuse to play a stone.  The game ends when both players pass.  At that
+time the dead formations are captured and the points are counted up.
+
+  The upper left hand quadrant shows an example of a Black formation which does
+contain two eyes.  If it is White's move, neither the moves A1 or B2 cause
+Black's formation to be completely surrounded.  However, White's placed A1
+or B2 stone will be completely surrounded and therefore cannot be moved 
+there.  The Black formation in the NW quadrant is therefore not dead but alive
+and is therefore not captured at the end of the game.
+
+  Finally, let's look at the SW quadrant.  Here we have a war for the life of
+Black's pieces.  This formation is used to explain the Rule of KO.  If it is
+Black's move, he can move 1...C11, capturing the White stone at C12.  Because
+of the rule of KO, White cannot play 2.C12 but must wait a move to play C12.
+In that one move, Black can play 2...C12 and has created a formation with two
+eyes which therefore lives.
+
+  Let's look at this another way.  Suppose the above position was created by
+White capturing Black's stone at C11.  Black cannot play 1...C11 because of
+the rule of KO and his entire formation is therefore dead since there is no 
+defense to 2.D13.  If Black plays 1...D13 then White can capture the entire
+formation with 2.A13.
+
+  Let's assume that the game reaches completion in the above position by the
+moves 1...C11 2.Pass C12 3.Pass Pass.  In that case, the dead formations would
+be removed and the board would look like this:
+
+ a  b  c  d  e  f  g  h  i  j  k  l  m
+ -  x  x  O  -  -  -  -  -  O  -  O  -   1
+ x  -  x  O  -  -  -  -  -  O  -  -  -   2
+ x  x  O  O  O  O  O  O  O  O  -  -  -   3                                     
+ O  O  O  -  -  -  -  -  -  O  O  O  O   4 
+ -  -  -  -  O  -  -  O  -  -  -  -  -   5 
+ -  -  -  -  -  -  -  -  -  -  O  -  -   6 
+ -  O  O  -  -  -  -  -  -  -  -  -  -   7 
+ -  -  -  -  -  O  -  -  -  O  -  -  -   8 
+ -  -  -  -  -  -  -  -  O  -  O  -  -   9 
+ -  O  O  O  -  -  -  -  O  -  -  -  -  10 
+ O  O  x  O  O  O  -  -  -  -  -  -  -  11 
+ x  x  x  x  x  O  -  -  -  -  -  -  -  12 
+ -  x  x  -  x  O  -  -  -  -  -  -  -  13 
+ 
+ Captured Stones: O- 4
+                  x- 12
+
+  In this hypothetical situation, White has 110 surrounded liberties and 12
+captured x pieces for a total of 122 points.  Black has 4 surrounded liberties
+and 4 captured O pieces for a total of 8 points.  White wins by 114 points.
+

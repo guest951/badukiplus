@@ -1,0 +1,15 @@
+FILES		  This file.
+
+twogtp1or2.py	  Python script to play two GTP-compliant engines against each
+		  other, e.g. Gnu Go against Badukiplus.
+
+README.script	  README file for twogtp1or2.py.
+
+Introduction	  A short introduction to the game of Go.
+
+Rules		  The official American Go Association (AGA) Rules of Go.
+
+Terminology	  Since Go is very popular in Japan, many expressions in Japanese
+		  are commonly used which need translation/explanation.
+
+baduki-0.2.9.tar.gz  Original Baduki source package by Lim Jaebum.

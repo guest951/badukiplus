@@ -1,0 +1,9 @@
+1999 : Lim Jaebum <artist@soback.kornet21.net>
+	- Baduki.
+
+2002 : Andrew D. Balsa <andrebalsa@mailingaddress.org>
+	- Conversion to C++.
+	- Removed X Window and GTK code.
+	- Slightly rearranged and documented source.
+	- Implementation of Go Text Protocol V2 front-end.
+	- Added python script to allow engine to play against other programs.

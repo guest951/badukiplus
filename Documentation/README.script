@@ -1,0 +1,57 @@
+Introduction
+============
+
+The original twogtp.py script was written by Inge Wallin (August 2002),
+based on a previous Perl version.
+
+The Python script twogtp1or2.py plays two GTP-compliant Go engines against
+each other. I have been using it to play games between Gnu Go, Amigoplus,
+Wallyplus and Badukiplus.
+
+This is a slightly modified version from the one shipped with Gnu Go 3.3.6,
+in the sense that:
+	- It asks the engine which version of the GTP protocol it is using
+and accomodates either version 1 or 2, and
+	- I fixed a small bug in the SGF output code in the original source.
+	- It uses final_score instead of estimate_score.
+
+In principle this script is an improved, drop-in replacement for the
+original twogtp.py.
+
+Usage
+=====
+
+The command line to play Gnu Go as White against Amigoplus as Black, is e.g.:
+
+./twogtp1or2.py --white './gnugo --mode gtp --quiet' --black './amigoplus
+-gtp' --boardsize 19 --komi 5.5 --handicap 4 --sgffile test --verbose 2 
+
+The game will be saved in sgf format in the file test001.sgf, created in
+the same directory as the python script.
+
+(assuming gnugo, amigoplus and twogtp1or2.py are in the same directory)
+
+Similarly, to play Amigoplus as White against Wallyplus as Black:
+
+./twogtp1or2.py --white './amigoplus -gtp' --black './wallyplus
+-gtp' --boardsize 9 --komi 5.5 --sgffile test1 --verbose 2 
+
+(assuming wallyplus, amigoplus and twogtp1or2.py are in the same directory)
+
+etc...
+
+Caveats
+=======
+
+Note that some game engines do not accept or do not play well at "uncommon"
+board sizes or with excessive handicaps.
+
+To Do
+===== 
+
+- Further scripting so that a learning engine can be "exercised" in an automated
+  fashion.
+  
+- Increment SGF file number.
+
+Andrew D. Balsa <andrebalsa@mailingaddress.org>, 13 October 2002 

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+ <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.20">
+ <TITLE>The Badukiplus Handbook: Introduction</TITLE>
+ <LINK HREF="index-2.html" REL=next>
+
+ <LINK HREF="index.html#toc1" REL=contents>
+</HEAD>
+<BODY>
+<A HREF="index-2.html">Next</A>
+Previous
+<A HREF="index.html#toc1">Contents</A>
+<HR>
+<H2><A NAME="s1">1.</A> <A HREF="index.html#toc1">Introduction</A></H2>
+
+
+<P>Badukiplus is an experimental Go playing engine with a GTP-compliant interface.
+It is
+written in C++ using the KDevelop development environment. Badukiplus has a
+simple
+structure derived from the original Pascal program by Stoney Ballard.</P>
+
+
+<H2><A NAME="ss1.1">1.1</A> <A HREF="index.html#toc1.1">Changes</A>
+</H2>
+
+
+<P>
+<OL>
+<LI>The source code was converted to C++ and made into a KDevelop project.</LI>
+<LI>A handbook in LinuxDoc SGML was added. KDevelop generates the HTML version
+automatically.</LI>
+<LI>The X Window routines were removed.</LI>
+<LI>BadukiPlus now accepts any board size between 9 and 19 (some bugs remain).</LI>
+<LI>A different number of handicap stones can be specified for the common
+board
+sizes of 9, 13 and 19.</LI>
+<LI>A Go Text Protocol (GTP) version 2 front-end was added.</LI>
+</OL>
+
+See the <EM>ChangeLog</EM> file for details.</P>
+
+<H2><A NAME="ss1.2">1.2</A> <A HREF="index.html#toc1.2">Pseudocode</A>
+</H2>
+
+<P>
+<PRE>
+main()
+  read command line
+  parse command line
+  if (gtp)
+    gtp_play_loop()
+  else
+    console_play_loop()
+  endif
+
+
+gtp_play_loop()
+  receive command
+  parse command
+  execute command
+
+
+console_play_loop()
+  display board on console
+  get console input
+  play
+</PRE>
+</P>
+
+<HR>
+<A HREF="index-2.html">Next</A>
+Previous
+<A HREF="index.html#toc1">Contents</A>
+</BODY>
+</HTML>

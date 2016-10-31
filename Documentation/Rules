@@ -1,0 +1,288 @@
+
+There are several sets of rules for playing Go.  The ones below were adopted
+for a three year trial period by the American Go Association (AGA) at the
+1991 National Board meeting.
+
+Note: Telego counts the score using the 'Territory' method described below.
+      Since 'Area' counting is not used, the easiest way to use Telego is to
+      modify the Official Rules (the outcome of the game will not be
+      affected) in two areas:
+             1) White is not required to make the last move.
+             2) 'Pass stones' are not required.
+      Any compensation (see below) is NOT computed by Telego.
+
+*****************************************************************************
+
+AGA Rules Committee                                       September 1, 1991
+
+                           Official AGA Rules of Go
+
+*   The following are the American Go Association Rules of Go for amateur
+*  play.  Unless specifically stated otherwise, these rules are in effect
+*  at all AGA sanctioned events.  Organizers and tournament directors are
+*  free to specify other sets of rules for use in their events.  Each line
+*  of the comments to the rules starts with an asterisk.
+
+   Any paraphrase of these rules which is identical in content is acceptable
+as a statement of the AGA Rules of Go so long as it makes reference to the
+more complete Official rules given below.
+
+*   By "identical in content" we mean that the result of applying these
+*  paraphrased rules should give the same result as would the Official Rules
+*  in every situation.}
+*
+*   These rules are supplemented by the Official AGA Tournament Regulations
+*  governing time control, player conduct, role of monitors, etc.
+
+   1) The Board and Stones: Go is a game of strategy between two sides
+usually played on a 19x19 grid (the board).  The game may also be played on
+smaller boards, 13x13 and 9x9 being the two most common variants.  The board
+is initially empty unless a handicap is given (see Rule 4).  The two sides,
+known as BLACK and WHITE, are each provided with an adequate supply of
+playing tokens, known as STONES, of the appropriate color.
+
+*   For recording purposes, the horizontal lines of the board are designated
+*  1,2,3,...,19, starting from the bottom as seen by Black.  The vertical
+*  lines are designated A,B,C,...T (skipping 'I'), starting from the left as
+*  seen by Black.  Points on the board are identified by their coordinates,
+*  e.g. A-1, C-3, T-19, etc.
+
+   2) Play: The players alternate in moving, with Black playing first.  In
+handicap games, White plays first after Black has placed his or her handicap
+stones.  A MOVE consists in playing a stone of one's color on an empty
+intersection (including edges and corners), or in PASSING.  Certain moves
+are ILLEGAL (Rules 5 and 6), but a pass is always legal (Rule 7).  POINTS
+are awarded for controlling space in a manner described below (Rule 12).  The
+object of the game is to end with the greater total number of points.
+
+  3) Compensation: In an even (non-handicap) game, Black gives White a
+compensation of 5.5 points for the advantage of the first move.  This
+compensation is added to White's score at the end of the game.  In handicap
+games Black gives White 0.5 point compensation.  This avoids draws.
+
+   4) Handicaps: The game may be played with a HANDICAP to compensate for
+differences in player strengths.  The weaker player takes Black, and either
+moves first, giving only 0.5 point compensation to White, as in Rule 3 (this
+is known as a "one stone handicap"), or places 2 to 9 stones on the board
+before the first White move.
+
+*   The nine intersections corresponding to the horizontal lines 4, 10, and
+*  16 and the vertical lines D, K, and Q are called STAR POINTS and are
+*  ordered as follows:
+*             1st star point   Q-16     5th star point  Q-10
+*             2nd star point   D-4      6th star point  D-10
+*             3rd star point   Q-4      7th star point  K-16
+*             4th star point   D-16     8th star point  K-4
+*                   9th star point   K-10 (center point)
+*   The handicap stones are traditionally played as follows:
+*       2 stones -- on the 1st and 2nd star points
+*       3 stones -- on the 1st through 3rd star points
+*       4 stones -- on the 1st through 4th star points
+*       5 stones -- on the 1st through 4th star points and the center point
+*       6 stones -- on the 1st through 6th star points
+*       7 stones -- on the 1st through 6th star points and the center point
+*       8 stones -- on the 1st through 8th star points
+*       9 stones -- on the 1st through 9th star points
+*   Unless otherwise specified, handicap stones shall be placed in this
+*  fashion.  Handicaps greater than nine stones and handicaps on boards with
+*  fewer than 19 lines are not standardized.
+
+   If the players have agreed to use area counting to score the game (Rule
+12), White receives an additional point of compensation for each Black
+handicap stone after the first.
+
+*   Black would otherwise gain an additional point of area for each handicap
+*  stone.
+
+   5) Capture: Stones of the same color are said to be CONNECTED if they
+are adjacent along horizontal or vertical -- not diagonal -- lines on the
+board.  A STRING of connected stones consists of those stones which can be
+reached from a given stone by moving only to adjacent stones of the same
+color.  A string of connected stones is SURROUNDED by stones of the
+opposite color if it has no empty points horizontally or vertically -- NOT
+DIAGONALLY -- adjacent to any of its member stones.  (Such adjacent empty
+points are known as LIBERTIES of the string.)
+
+   After a player moves, any stone or string of stones belonging to the
+opponent which is completely surrounded by the player's own stones is
+CAPTURED, and removed from the board.  Such stones become PRISONERS of the
+capturing player.  It is ILLEGAL for a player to move so as to create a
+string of his or her own stones which is completely surrounded (without
+liberties) after any surrounded opposing stones are captured.
+
+*   This means that it is possible to fill an empty space within an
+*  opponent's group and capture even if the player's own stone or stones
+*  would momentarily be surrounded by the group being captured. See Figure 2.
+*  But SELF-CAPTURE IS ILLEGAL.
+
+   6) Repeated Board Position (Ko): It is ILLEGAL to play in such a way as to
+recreate a previous board position from the game, with the same player to
+play.
+
+*   The most typical example is a situation where the players can each
+*  alternately capture and recapture a single stone.  This is known as "ko"
+*  (See figure 3).  After the first capture the player moving next may NOT
+*  capture immediately, as this would repeat the board position; instead,
+*  that player must play somewhere else on the board (or pass).  The player
+*  who first captured may then "fill" the ko (or otherwise resolve it), or
+*  play elsewhere as well (often in response to the other player's previous
+*  move.) If the board position has changed, and the ko has not yet been
+*  resolved, the opponent is then free to capture, and it is the original
+*  player who may not then immediately recapture.  This process is known as a
+*  KO FIGHT, and the moves played away from the ko itself are known as KO
+*  THREATS.
+*
+*   Rarely, multiple kos or other repetitive situations will arise; the
+*  principle for handling them is always the same: the players must avoid
+*  repeating the full-board position, so they are periodically, and
+*  alternately, forced to play away from the repetitive situation before
+*  responding.
+
+   7) Passing: On his or her turn, a player may PASS by handing the opponent
+a stone, referred to as a PASS STONE, rather than playing a stone on the
+board.
+
+*   Normally neither player would choose to pass if there were any worthwhile
+*  moves to be made on the board (even if they did not have to give up a pass
+*  stone).  Thus, the exchange of a pass stone with the opponent also serves
+*  as a signal that the player passing believes that the game is over.  Of
+*  course, the opponent is free to continue to play if he or she believes
+*  that there are worthwhile moves left to make, and the player who passed is
+*  free to respond.
+
+   8) Illegal Moves:  An illegal move is one violating the rules.  If a
+player makes an illegal move -- such as moving twice in a row (i.e., before
+the opponent has made a response), attempting to play on an occupied
+intersection, self-capture, or retaking a ko so as to repeat the full board
+position, the player must take back his or her move (BOTH moves, if he or she
+moved twice in succession), it shall be treated as a PASS, and a pass stone
+exchanged.
+
+   An illegal move must be noted as such by the opponent before he or she
+makes his or her move.  When a player moves, he or she is tacitly accepting
+the opponent's previous move as valid.  In particular, if it is discovered
+that an earlier move by one of the players was illegal, the game must
+nevertheless be continued AS IT STANDS unless both players agree to restore
+the earlier board position and proceed from that point.
+
+   9) Ending the Game: Two consecutive passes signal the end of the game.
+After two passes, the players must attempt to agree on the status of all
+groups of stones remaining on the board.  Any stones which the players agree
+could not escape capture if the game continued, but which have not yet been
+captured and removed, are termed DEAD STONES.  If the players agree on the
+status of all such groups, they are removed from the board as prisoners of
+the player who could capture, and the game is scored as in Rule 12.  If there
+is a disagreement over the status of some group or groups, PLAY IS RESUMED as
+specified in Rule 10.
+
+   10) Disputes: If the players disagree about the status of a group of
+stones left on the board after both have passed, PLAY IS RESUMED, with the
+opponent of the last player to pass having the move.  The game is over when
+the players agree on the status of all groups on the board, or, failing such
+agreement, if both players pass TWICE in succession.  In this case ANY STONES
+REMAINING ON THE BOARD ARE DEEMED ALIVE.  Any stone or group of stones
+surrounded and captured during this process is added to the capturing
+player's prisoners as usual.
+
+*   It is recommended, particularly if the players do not share a common
+*  language, that the following procedure be used to determine agreement on
+*  the status of groups.  After two consecutive passes, the next player
+*  touches each connected string of opposing stones on the board which he or
+*  she believes to be dead.  If the opponent disagrees, he or she also
+*  touches the same string. When a player is done indicating groups he or she
+*  believes are dead, he or she PASSES, passing a stone to the opponent as
+*  usual, and the opponent follows the same procedure.  AT ANY POINT, A
+*  PLAYER MAY RESUME PLAY RATHER THAN CONTINUING TO INDICATE DEAD GROUPS OR
+*  PASSING. If BOTH players pass and there is no disagreement indicated, the
+*  game is over, and all groups which the players have indicated as dead are
+*  removed from the board. If they both pass while a disagreement still
+*  exists, ALL STONES REMAINING ON THE BOARD ARE ALIVE, and the board is
+*  counted as it stands. (The burden is thus effectively on the player who
+*  would be disadvantaged by such a result to resume play in the event of a
+*  disagreement.)
+
+   11) The Last Move: White must make the last move -- if necessary, an
+additional pass, with a stone passed to the opponent as usual.  The total
+number of stones played or passed by the two players during the entire game
+must be equal.
+
+   12) Counting: There are two methods for counting the score at the end of
+the game.  One is based on TERRITORY, the other on AREA.  The players should
+agree in advance of play which method they will use.  If there is no
+agreement, territory counting shall be used.
+
+*   Although players' scores may differ under the two methods, the
+*  difference in their scores, and hence the game result, will be the same.
+
+   Territory: Those empty points on the board which are entirely surrounded
+by live stones of a single color are considered the TERRITORY of the player
+of that color.
+
+*   At the end of the game, the empty points remaining on the board fall
+*  into REGIONS.  A region is the smallest set of empty points containing a
+*  given empty point and any empty points adjacent to any empty point in the
+*  set.  That is, a region consists of those empty points which can be
+*  reached from a given empty point by moving only to adjacent empty points.
+*  A region is entirely surrounded by stones of a single color if the only
+*  stones adjacent to empty points in the region are of that color.  There
+*  are situations (Japanese SEKI) in which a region of empty points is left
+*  at the end of a game which is NOT entirely surrounded by stones of a
+*  single color, and which neither player would fill because to do so would
+*  bring dire consequences.  See Figure 4.  When counting by territory, it is
+*  possible that there will be some neutral points left between live groups
+*  belonging to the two players which have not been filled, although it is
+*  customary to fill all such points before scoring the game.
+
+   Area: All live stones of a player's color left on the board together with
+as many points of territory surrounded by a player constitute that player's
+AREA.
+
+   Neutral Points: Any empty points left on the board at the end of the game
+which are NOT completely surrounded by either player's stones are known as
+NEUTRAL POINTS, and are not counted toward either player's territory or
+area. (There will rarely be any such points.)
+
+   Counting by Territory: When counting by territory, players add up their
+total territory LESS any prisoners held by the opponent (including dead
+stones removed at the end of the game).  The player with the greater total
+(after adjusting for any compensation offered according to Rule 3) is the
+winner.
+
+*   It is customary for the players to fill in their opponent's territory
+*  with their prisoners, and to then rearrange their territories to
+*  facilitate counting.  These are merely mechanical conventions to simplify
+*  counting.
+
+   Counting by Area: When counting by area, the players add up their total
+area.  PRISONERS ARE IGNORED.  The player with the greater total area
+(after adjusting for any compensation offered according to Rules 3 and 4) is
+the winner.
+
+*   In fact, since the total of the two players' areas will sum to 361,
+*  less any neutral points left on the board in seki, it is generally only
+*  necessary for ONE of the two players to count their area; if it exceeds
+*  180, (or 180 adjusted for half of any neutral points in seki), they are
+*  the winner.  It is customary for the player doing the counting according
+*  to this method to fill in his or her territory and then rearrange the
+*  stones into convenient heaps.  Again, these are merely mechanical
+*  conventions to simplify the counting process.
+
+
+*  In the Figures:  O = White
+*                   X = Black
+*                   + = intersection
+*                   - = edge intersection
+
+  +++++++++            ++++++++       +++++++++
+  ++OOOOO++            ++++++++       +++++++++
+  ++OXXXO++            ++++++++       +++++++++
+  ++OX*XO++            +++XO+++       ++OOOXX++
+  ++OXXXO++            ++X+XO++       ++OXXOX++
+  ++OOOOO++            +++XO+++       ++OX+OX++
+  +++++++++            ++++++++       --OX-OX--
+
+  Figure 2             Figure 3       Figure 4
+  White * captures        Ko            Seki
+  the Black stones
+
+
