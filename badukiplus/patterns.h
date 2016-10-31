@@ -83,4 +83,4 @@ int get_py(int y, int rx, int ry, struct pattern_type pat, int dir);
 
 #define PPOS(a, b)	*px = PX(a,b);\
 			*py = PY(a,b)
-#define PERCENT(a)	(random() % 100) < a
+#define PERCENT(a)	(rand() % 100) < a
