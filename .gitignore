@@ -5,6 +5,7 @@ admin/compile
 autom4te.cache/
 badukiplus/.deps/
 badukiplus/badukiplus
+badukiplus/badukiplus.exe
 config.cache
 config.h
 config.log
