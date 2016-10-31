@@ -21,7 +21,9 @@
 #include <cstdlib>
 #include <iostream>
 #include <iomanip>
-#include <string>
+//#include <string>
+#include <cstdio>
+#include <cstring>
 
 using namespace std;
 
