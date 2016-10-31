@@ -1,7 +1,6 @@
 *.[oa]
 *~
 Makefile
-admin/compile
 autom4te.cache/
 badukiplus/.deps/
 badukiplus/badukiplus
