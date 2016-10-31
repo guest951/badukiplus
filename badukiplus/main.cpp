@@ -81,7 +81,7 @@ int main( int argc, char *argv[] )
 {
   bool playgtp = false;        // assume we are playing on the console
 
-  thegame.RANDOM_SEED = 1;     // Baduki doesn't use rand()
+  thegame.RANDOM_SEED = time(NULL);     // Baduki does use rand()
 
   thegame.BadukiColor = BLACK; // Badukiplus plays Black by default
 
