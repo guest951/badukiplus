@@ -18,7 +18,7 @@
 
 /* $Id: patterns.h,v 1.12 1999/04/01 20:24:58 artist Exp artist $ */
 
-#define MAX_PATTERN_SIZE	36	/* x_size * y_size */
+#define MAX_PATTERN_SIZE	37	/* x_size * y_size */
 
 #define PT_WHOLE	(1 << 0)
 #define PT_CENTER	(1 << 1)
